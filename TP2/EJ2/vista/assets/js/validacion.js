@@ -111,12 +111,10 @@ $('#form4').submit(function(event) {
 
         // Limpiar mensaje anterior
         $('#error-message').text('');
-
         // Validar vacío
         if (edad === '') {
             errorMessage = 'La edad es obligatoria.';
         }
-
         if (errorMessage !== '') {
             $('#error-message').text(errorMessage);
             return false; // evitar envío

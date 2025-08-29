@@ -1,8 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const formulario = document.getElementById("form1");
+  const formulario1 = document.getElementById("form1");
   const formulario3 = document.getElementById("form3");
 
+if (formulario1) {
+  formulario1.addEventListener("submit", function (event) {
 
+    const numero = document.getElementById("numero").value.trim();
+
+    // Validar número
+    if (numero === "") {
+      event.preventDefault();
+      alert("El número es obligatorio.");
+      return;
+    } 
+    if (isNaN(numero)) {
+      event.preventDefault();
+      alert("Debes ingresar un número válido.");
+      return;
+    }
+
+    alert("Formulario enviado con éxito ✅");
+    this.submit();
+  });
+}
+
+if (formulario3) {
   formulario3.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -55,23 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
     alert("Formulario enviado con éxito ✅");
     formulario3.submit(); 
   });
+}
 
-  formulario.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const numero = document.getElementById("numero").value.trim();
-
-    // Validar número
-    if (numero === "") {
-      alert("El número es obligatorio.");
-      return;
-    } 
-    if (isNaN(numero)) {
-      alert("Debes ingresar un número válido.");
-      return;
-    }
-
-    alert("Formulario enviado con éxito ✅");
-    formulario.submit(); 
-  });
 });
