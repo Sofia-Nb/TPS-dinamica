@@ -26,7 +26,6 @@ if (formulario1) {
 
 if (formulario3) {
   formulario3.addEventListener("submit", function (event) {
-    event.preventDefault();
 
     const nombre = document.getElementById("nombre").value.trim();
     const apellido = document.getElementById("apellido").value.trim();
@@ -35,45 +34,52 @@ if (formulario3) {
 
     // ✅ Validar nombre
     if (nombre === "") {
+      event.preventDefault();
       alert("El nombre es obligatorio.");
       return;
     }
     if (!/^[a-zA-Z\s]+$/.test(nombre)) {
+      event.preventDefault();
       alert("El nombre solo puede contener letras y espacios.");
       return;
     }
 
     // ✅ Validar direccion
     if (direccion === "") {
+      event.preventDefault();
       alert("La direccion es obligatoria.");
       return;
     }
 
     // ✅ Validar apellido
     if (apellido === "") {
+      event.preventDefault();
       alert("El apellido es obligatorio.");
       return;
     }
     if (!/^[a-zA-Z\s]+$/.test(apellido)) {
+      event.preventDefault();
       alert("El apellido solo puede contener letras y espacios.");
       return;
     }
 
     // ✅ Validar edad
     if (edad === "") {
+      event.preventDefault();
       alert("La edad es obligatoria.");
       return;
     }
     if (isNaN(edad)) {
+      event.preventDefault();
       alert("La edad debe ser un número.");
       return;
     }
     if (parseInt(edad) < 0) {
+      event.preventDefault();
       alert("La edad no puede ser negativa.");
       return;
     }
 
-    // Si todo está ok
     alert("Formulario enviado con éxito ✅");
     formulario3.submit(); 
   });
