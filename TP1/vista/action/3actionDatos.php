@@ -13,10 +13,13 @@
         
         <p>
 <?php    
-    include_once ('../../control/Datos.php');  
+    include_once '../../control/Datos.php'; 
+    include_once '../utils/datasubmitted.php'; 
+
+    $dato = datasubmitted(); 
     $objDatos = new Datos();
 
-    $arreglo = $objDatos->procesarDatos($_POST); // Asumiendo que este método retorna un array de datos
+    $arreglo = $objDatos->obtenerDatos($dato); // Asumiendo que este método retorna un array de datos
 
    
     if ((count($arreglo) == 4) && ($arreglo !== null)) {
@@ -38,7 +41,7 @@
 
 
 
-        <a href="../form3.html" class="btn">Volver al formulario</a>
+        <a href="../3formDatos.html" class="btn">Volver al formulario</a>
     </div>
 </body>
 </html>

@@ -28,6 +28,6 @@ if ($dato) {
 <body>
     <h1>Resultado</h1>
     <p><?php echo $mensaje; ?></p>
-    <a href="../formNumero.html" class="btn">Volver a la página anterior</a>
+    <a href="../1formNumero.html" class="btn">Volver a la página anterior</a>
 </body>
 </html>

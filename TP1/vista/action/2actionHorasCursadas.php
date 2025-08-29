@@ -24,7 +24,7 @@
         }
         ?>
         <!-- Botón para volver a la página principal -->
-        <a href="../formCursadas.html" class="btn">Volver a la página principal</a>
+        <a href="../2formCursadas.html" class="btn">Volver a la página principal</a>
     </div>
 </body>
 </html>
